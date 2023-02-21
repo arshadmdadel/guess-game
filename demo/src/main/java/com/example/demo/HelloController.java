@@ -37,29 +37,8 @@ public class HelloController {
          selectmsg.setText("Your Number Iis Generated Guess the Number and select the proper Circle");
 
     }
-    void action() throws IOException {
-        if(a==x)
-        {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Decision.fxml"));
-            Parent root = loader.load();
-            DecisionController decisionController = loader.getController();
-            decisionController.setTxt("YOU WON!");
-            Stage msgStage = (Stage) ((Node) (event.getSource())).getScene().getWindow();
-            msgStage.setScene(new Scene(root, 500, 500));
-        } else if (x!=a && count!=1) {
-            count--;
-            changetext.setText("Attempts left: 1");
-        }
-        else{
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Decision.fxml"));
-            Parent root = loader.load();
-            DecisionController decisionController = loader.getController();
-            decisionController.setTxt(name+" YOU LOST!");
-            Stage msgStage = (Stage) ((Node) (event.getSource())).getScene().getWindow();
-            msgStage.setScene(new Scene(root, 500, 500));
-        }
-    }
-
+    
+    
     @FXML
     void action1(MouseEvent event) throws IOException {
          a=1;
